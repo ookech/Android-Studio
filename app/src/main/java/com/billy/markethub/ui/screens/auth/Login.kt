@@ -14,6 +14,7 @@ import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CheckboxDefaults.colors
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
@@ -39,6 +40,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.billy.markethub.R
+import com.billy.markethub.navigation.ROUT_HOME
+import com.billy.markethub.navigation.ROUT_INTENT
 import com.billy.markethub.navigation.ROUT_REGISTER
 import com.billy.markethub.ui.theme.red
 
@@ -109,7 +112,7 @@ fun LoginScreen(
         Spacer(modifier = Modifier.height(20.dp))
 
         Button(
-            onClick = {},
+            onClick = {navController.navigate(ROUT_INTENT)},
             colors = ButtonDefaults.buttonColors(red),
             shape = RoundedCornerShape(18.dp),
             modifier = Modifier.width(350.dp),
@@ -117,6 +120,8 @@ fun LoginScreen(
 
             ) {
             Text(text = "Login")
+
+
         }
 
         TextButton(onClick = {navController.navigate(ROUT_REGISTER)}) {

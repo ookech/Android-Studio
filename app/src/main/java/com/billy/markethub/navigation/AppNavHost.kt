@@ -10,16 +10,19 @@ import androidx.navigation.compose.rememberNavController
 import com.billy.markethub.ui.screens.auth.LoginScreen
 import com.billy.markethub.ui.screens.auth.RegisterScreen
 import com.billy.markethub.ui.screens.home.HomeScreen
+import com.billy.markethub.ui.screens.i.Intentscreen
 import com.billy.markethub.ui.screens.onboarding.onboardingscreen
 import com.billy.markethub.ui.screens.payment.PaymentScreen
+import com.billy.markethub.ui.screens.scarffold.ScarffoldScreen
 import com.billy.markethub.ui.screens.services.ServiceScreen
+import com.billy.markethub.ui.screens.splash.SplashScreen
 
 
 @Composable
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUT_ONBOARDING
+    startDestination: String = ROUT_SPLASH
 ) {
 
     NavHost(
@@ -48,6 +51,16 @@ fun AppNavHost(
         composable(ROUT_SERVICES) {
             ServiceScreen(navController)
         }
+        composable(ROUT_INTENT) {
+            Intentscreen(navController)
+        }
+        composable(ROUT_SPLASH) {
+            SplashScreen(navController)
+        }
+        composable(ROUT_SCARFFOLD) {
+            ScarffoldScreen(navController)
+        }
+
 
 
 
