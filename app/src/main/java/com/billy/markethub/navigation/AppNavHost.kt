@@ -1,6 +1,5 @@
 package com.billy.markethub.navigation
 
-import AboutScreen
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
@@ -16,6 +15,7 @@ import com.billy.markethub.ui.screens.payment.PaymentScreen
 import com.billy.markethub.ui.screens.scarffold.ScarffoldScreen
 import com.billy.markethub.ui.screens.services.ServiceScreen
 import com.billy.markethub.ui.screens.splash.SplashScreen
+import com.udeh.markethub.ui.screens.about.AboutScreen
 
 
 @Composable
